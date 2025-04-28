@@ -8,8 +8,8 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "C:/Users/lzacc/OneDrive/Documents/PlatformIO/Projects/ch32/AUGC/TinyBasic/include",
-                "C:/Users/lzacc/OneDrive/Documents/PlatformIO/Projects/ch32/AUGC/TinyBasic/src",
+                "C:/Users/lzacc/OneDrive/Documents/PlatformIO/Projects/ch32/AUGC/RVPC_TinyBasic/include",
+                "C:/Users/lzacc/OneDrive/Documents/PlatformIO/Projects/ch32/AUGC/RVPC_TinyBasic/src",
                 "C:/Users/lzacc/.platformio/packages/framework-wch-noneos-sdk/Core/ch32v00x",
                 "C:/Users/lzacc/.platformio/packages/framework-wch-noneos-sdk/Peripheral/ch32v00x/inc",
                 "C:/Users/lzacc/.platformio/packages/framework-wch-noneos-sdk/Peripheral/ch32v00x/src",
@@ -21,8 +21,8 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "C:/Users/lzacc/OneDrive/Documents/PlatformIO/Projects/ch32/AUGC/TinyBasic/include",
-                    "C:/Users/lzacc/OneDrive/Documents/PlatformIO/Projects/ch32/AUGC/TinyBasic/src",
+                    "C:/Users/lzacc/OneDrive/Documents/PlatformIO/Projects/ch32/AUGC/RVPC_TinyBasic/include",
+                    "C:/Users/lzacc/OneDrive/Documents/PlatformIO/Projects/ch32/AUGC/RVPC_TinyBasic/src",
                     "C:/Users/lzacc/.platformio/packages/framework-wch-noneos-sdk/Core/ch32v00x",
                     "C:/Users/lzacc/.platformio/packages/framework-wch-noneos-sdk/Peripheral/ch32v00x/inc",
                     "C:/Users/lzacc/.platformio/packages/framework-wch-noneos-sdk/Peripheral/ch32v00x/src",
