@@ -1007,11 +1007,11 @@ unsigned char* iexe() {
   while (*cip != I_EOL) { //行末まで繰り返す
   
   //強制的な中断の判定
-    if (c_kbhit()) //もし未読文字があったら
-      if (c_getch() == 27) { //読み込んでもし［ESC］キーだったら
-        err = ERR_ESC; //エラー番号をセット
-        break; //打ち切る
-      }
+//    if (c_kbhit()) //もし未読文字があったら
+    if (c_getch() == 27) { //読み込んでもし［ESC］キーだったら
+      err = ERR_ESC; //エラー番号をセット
+      break; //打ち切る
+    }
 
     //中間コードを実行
     switch (*cip) { //中間コードで分岐
