@@ -2,7 +2,7 @@
 Simple BASIC interpreter for [Olimex RVPC (1€ PC)](https://www.olimex.com/Products/Retro-Computers/RVPC/open-source-hardware)
 
 ## Compiling
-Install [Visual Studio Code](https://visualstudio.microsoft.com/downloads/) for your platform, add the [PlatformIO](https://platformio.org/install/ide?install=vscode) plugin and install inside it the [platform-ch32v](https://github.com/Community-PIO-CH32V/platform-ch32v). Download or sync this repository and open it using vscode, then compile it clicking on the "check" symbol on the lower left status bar.
+Install [Visual Studio Code](https://visualstudio.microsoft.com/downloads/) for your platform, add the [PlatformIO](https://platformio.org/install/ide?install=vscode). Download or sync this repository and open it using vscode, then compile it clicking on the "check" symbol on the lower left status bar.
 
 There are plenty of tutorial to use vscode/platformio. If you don't feel inclined to compile, you can download the binary from the release section.
 
