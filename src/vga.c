@@ -270,38 +270,39 @@ inline static void vga_prepare_line(uint32_t line) {
 	} else {
 		waste_time(VGA_PREPARE_WASTE);
 	}
-	frame_line_bits[ 0] = char_defs[char_indexes[ 0] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col ==  0 ? MASK : 0);
-	frame_line_bits[ 1] = char_defs[char_indexes[ 1] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col ==  1 ? MASK : 0);
-	frame_line_bits[ 2] = char_defs[char_indexes[ 2] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col ==  2 ? MASK : 0);
-	frame_line_bits[ 3] = char_defs[char_indexes[ 3] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col ==  3 ? MASK : 0);
-	frame_line_bits[ 4] = char_defs[char_indexes[ 4] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col ==  4 ? MASK : 0);
-	frame_line_bits[ 5] = char_defs[char_indexes[ 5] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col ==  5 ? MASK : 0);
-	frame_line_bits[ 6] = char_defs[char_indexes[ 6] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col ==  6 ? MASK : 0);
-	frame_line_bits[ 7] = char_defs[char_indexes[ 7] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col ==  7 ? MASK : 0);
-	frame_line_bits[ 8] = char_defs[char_indexes[ 8] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col ==  8 ? MASK : 0);
-	frame_line_bits[ 9] = char_defs[char_indexes[ 9] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col ==  9 ? MASK : 0);
-	frame_line_bits[10] = char_defs[char_indexes[10] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 10 ? MASK : 0);
-	frame_line_bits[11] = char_defs[char_indexes[11] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 11 ? MASK : 0);
-	frame_line_bits[12] = char_defs[char_indexes[12] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 12 ? MASK : 0);
-	frame_line_bits[13] = char_defs[char_indexes[13] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 13 ? MASK : 0);
-	frame_line_bits[14] = char_defs[char_indexes[14] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 14 ? MASK : 0);
-	frame_line_bits[15] = char_defs[char_indexes[15] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 15 ? MASK : 0);
-	frame_line_bits[16] = char_defs[char_indexes[16] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 16 ? MASK : 0);
-	frame_line_bits[17] = char_defs[char_indexes[17] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 17 ? MASK : 0);
-	frame_line_bits[18] = char_defs[char_indexes[18] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 18 ? MASK : 0);
-	frame_line_bits[19] = char_defs[char_indexes[19] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 19 ? MASK : 0);
-	frame_line_bits[20] = char_defs[char_indexes[20] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 20 ? MASK : 0);
-	frame_line_bits[21] = char_defs[char_indexes[21] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 21 ? MASK : 0);
-	frame_line_bits[22] = char_defs[char_indexes[22] & CHARS_COUNT_MASK] << 2 | 0xfffffc00 ^ (vga_cursor_pos.col == 22 ? MASK : 0);
+
+	frame_line_bits[ 0] = (char_defs[char_indexes[ 0] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col ==  0 ? MASK : 0);
+	frame_line_bits[ 1] = (char_defs[char_indexes[ 1] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col ==  1 ? MASK : 0);
+	frame_line_bits[ 2] = (char_defs[char_indexes[ 2] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col ==  2 ? MASK : 0);
+	frame_line_bits[ 3] = (char_defs[char_indexes[ 3] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col ==  3 ? MASK : 0);
+	frame_line_bits[ 4] = (char_defs[char_indexes[ 4] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col ==  4 ? MASK : 0);
+	frame_line_bits[ 5] = (char_defs[char_indexes[ 5] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col ==  5 ? MASK : 0);
+	frame_line_bits[ 6] = (char_defs[char_indexes[ 6] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col ==  6 ? MASK : 0);
+	frame_line_bits[ 7] = (char_defs[char_indexes[ 7] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col ==  7 ? MASK : 0);
+	frame_line_bits[ 8] = (char_defs[char_indexes[ 8] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col ==  8 ? MASK : 0);
+	frame_line_bits[ 9] = (char_defs[char_indexes[ 9] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col ==  9 ? MASK : 0);
+	frame_line_bits[10] = (char_defs[char_indexes[10] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 10 ? MASK : 0);
+	frame_line_bits[11] = (char_defs[char_indexes[11] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 11 ? MASK : 0);
+	frame_line_bits[12] = (char_defs[char_indexes[12] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 12 ? MASK : 0);
+	frame_line_bits[13] = (char_defs[char_indexes[13] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 13 ? MASK : 0);
+	frame_line_bits[14] = (char_defs[char_indexes[14] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 14 ? MASK : 0);
+	frame_line_bits[15] = (char_defs[char_indexes[15] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 15 ? MASK : 0);
+	frame_line_bits[16] = (char_defs[char_indexes[16] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 16 ? MASK : 0);
+	frame_line_bits[17] = (char_defs[char_indexes[17] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 17 ? MASK : 0);
+	frame_line_bits[18] = (char_defs[char_indexes[18] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 18 ? MASK : 0);
+	frame_line_bits[19] = (char_defs[char_indexes[19] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 19 ? MASK : 0);
+	frame_line_bits[20] = (char_defs[char_indexes[20] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 20 ? MASK : 0);
+	frame_line_bits[21] = (char_defs[char_indexes[21] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 21 ? MASK : 0);
+	frame_line_bits[22] = (char_defs[char_indexes[22] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 22 ? MASK : 0);
 	#if VGA_NUM_COLS > 23
-	frame_line_bits[23] = char_defs[char_indexes[23] & CHARS_COUNT_MASK] ^ (vga_cursor_pos.col == 23 ? MASK : 0);
-	frame_line_bits[24] = char_defs[char_indexes[24] & CHARS_COUNT_MASK] ^ (vga_cursor_pos.col == 24 ? MASK : 0);
-	frame_line_bits[25] = char_defs[char_indexes[25] & CHARS_COUNT_MASK] ^ (vga_cursor_pos.col == 25 ? MASK : 0);
-	frame_line_bits[26] = char_defs[char_indexes[26] & CHARS_COUNT_MASK] ^ (vga_cursor_pos.col == 26 ? MASK : 0);
-	frame_line_bits[27] = char_defs[char_indexes[27] & CHARS_COUNT_MASK] ^ (vga_cursor_pos.col == 27 ? MASK : 0);
-	frame_line_bits[28] = char_defs[char_indexes[28] & CHARS_COUNT_MASK] ^ (vga_cursor_pos.col == 28 ? MASK : 0);
-	frame_line_bits[29] = char_defs[char_indexes[29] & CHARS_COUNT_MASK] ^ (vga_cursor_pos.col == 29 ? MASK : 0);
-	frame_line_bits[30] = char_defs[char_indexes[30] & CHARS_COUNT_MASK] ^ (vga_cursor_pos.col == 30 ? MASK : 0);
+	frame_line_bits[23] = (char_defs[char_indexes[23] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 23 ? MASK : 0);
+	frame_line_bits[24] = (char_defs[char_indexes[24] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 24 ? MASK : 0);
+	frame_line_bits[25] = (char_defs[char_indexes[25] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 25 ? MASK : 0);
+	frame_line_bits[26] = (char_defs[char_indexes[26] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 26 ? MASK : 0);
+	frame_line_bits[27] = (char_defs[char_indexes[27] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 27 ? MASK : 0);
+	frame_line_bits[28] = (char_defs[char_indexes[28] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 28 ? MASK : 0);
+	frame_line_bits[29] = (char_defs[char_indexes[29] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 29 ? MASK : 0);
+	frame_line_bits[30] = (char_defs[char_indexes[30] & CHARS_COUNT_MASK] << 2 | 0xfffffc00) ^ (vga_cursor_pos.col == 30 ? MASK : 0);
 	#endif
 	#else
 	frame_line_bits[ 0] = char_defs[char_indexes[ 0] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
@@ -327,40 +328,15 @@ inline static void vga_prepare_line(uint32_t line) {
 	frame_line_bits[20] = char_defs[char_indexes[20] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
 	frame_line_bits[21] = char_defs[char_indexes[21] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
 	frame_line_bits[22] = char_defs[char_indexes[22] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
-	/*
-	frame_line_bits[ 0] = char_defs[char_indexes[ 0] & CHARS_COUNT_MASK];
-	frame_line_bits[ 1] = char_defs[char_indexes[ 1] & CHARS_COUNT_MASK];
-	frame_line_bits[ 2] = char_defs[char_indexes[ 2] & CHARS_COUNT_MASK];
-	frame_line_bits[ 3] = char_defs[char_indexes[ 3] & CHARS_COUNT_MASK];
-	frame_line_bits[ 4] = char_defs[char_indexes[ 4] & CHARS_COUNT_MASK];
-	frame_line_bits[ 5] = char_defs[char_indexes[ 5] & CHARS_COUNT_MASK];
-	frame_line_bits[ 6] = char_defs[char_indexes[ 6] & CHARS_COUNT_MASK];
-	frame_line_bits[ 7] = char_defs[char_indexes[ 7] & CHARS_COUNT_MASK];
-	frame_line_bits[ 8] = char_defs[char_indexes[ 8] & CHARS_COUNT_MASK];
-	frame_line_bits[ 9] = char_defs[char_indexes[ 9] & CHARS_COUNT_MASK];
-	frame_line_bits[10] = char_defs[char_indexes[10] & CHARS_COUNT_MASK];
-	frame_line_bits[11] = char_defs[char_indexes[11] & CHARS_COUNT_MASK];
-	frame_line_bits[12] = char_defs[char_indexes[12] & CHARS_COUNT_MASK];
-	frame_line_bits[13] = char_defs[char_indexes[13] & CHARS_COUNT_MASK];
-	frame_line_bits[14] = char_defs[char_indexes[14] & CHARS_COUNT_MASK];
-	frame_line_bits[15] = char_defs[char_indexes[15] & CHARS_COUNT_MASK];
-	frame_line_bits[16] = char_defs[char_indexes[16] & CHARS_COUNT_MASK];
-	frame_line_bits[17] = char_defs[char_indexes[17] & CHARS_COUNT_MASK];
-	frame_line_bits[18] = char_defs[char_indexes[18] & CHARS_COUNT_MASK];
-	frame_line_bits[19] = char_defs[char_indexes[19] & CHARS_COUNT_MASK];
-	frame_line_bits[20] = char_defs[char_indexes[20] & CHARS_COUNT_MASK];
-	frame_line_bits[21] = char_defs[char_indexes[21] & CHARS_COUNT_MASK];
-	frame_line_bits[22] = char_defs[char_indexes[22] & CHARS_COUNT_MASK];
-	*/
 	#if VGA_NUM_COLS > 23
-	frame_line_bits[23] = char_defs[char_indexes[23] & CHARS_COUNT_MASK];
-	frame_line_bits[24] = char_defs[char_indexes[24] & CHARS_COUNT_MASK];
-	frame_line_bits[25] = char_defs[char_indexes[25] & CHARS_COUNT_MASK];
-	frame_line_bits[26] = char_defs[char_indexes[26] & CHARS_COUNT_MASK];
-	frame_line_bits[27] = char_defs[char_indexes[27] & CHARS_COUNT_MASK];
-	frame_line_bits[28] = char_defs[char_indexes[28] & CHARS_COUNT_MASK];
-	frame_line_bits[29] = char_defs[char_indexes[29] & CHARS_COUNT_MASK];
-	frame_line_bits[30] = char_defs[char_indexes[30] & CHARS_COUNT_MASK];
+	frame_line_bits[23] = char_defs[char_indexes[23] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
+	frame_line_bits[24] = char_defs[char_indexes[24] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
+	frame_line_bits[25] = char_defs[char_indexes[25] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
+	frame_line_bits[26] = char_defs[char_indexes[26] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
+	frame_line_bits[27] = char_defs[char_indexes[27] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
+	frame_line_bits[28] = char_defs[char_indexes[28] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
+	frame_line_bits[29] = char_defs[char_indexes[29] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
+	frame_line_bits[30] = char_defs[char_indexes[30] & CHARS_COUNT_MASK] << 2 | 0xfffffc00;
 	#endif
 	#endif
 
